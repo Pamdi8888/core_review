@@ -1,5 +1,3 @@
 # core_review
 
-A new Flutter project.
-
-
+This is the flutter project for DevSoc core review. 
