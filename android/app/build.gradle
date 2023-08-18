@@ -51,7 +51,7 @@ android {
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
+        versionName "Core Review Project"
     }
 
     buildTypes {
@@ -59,6 +59,20 @@ android {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig signingConfigs.debug
+        }
+        applicationVariants.all {
+                // this method is use to rename your all apk weather
+                // it may be signed or unsigned(debug apk)
+            variant ->
+                variant.outputs.each {
+                        // on below line we are setting a
+                        // name to our apk as GFG.apk
+                    output ->
+                        def name = "Core_Review_Project.apk"
+                        // on below line we are setting the
+                        // outputFile Name to our apk file.
+                        output.outputFileName = name
+                }
         }
     }
 }
